@@ -25,19 +25,20 @@ files.forEach((file) => {
     var fileME = fs.readFileSync(`./${file}`, "utf-8");
     var re = /(\[\S.*\]\(https?:\/\/.*\))+/g;
     let myArray = fileME.match(re);
-    // result = myArray.map((a) => {
-    //     var reText = /(\[\S.*\])+/g;
-    //     var reLink = /(\(https?:\/\/.*\))+/g;
-    //     let text = a.match(reText);
-    //     let link = a.match(reLink);
-    //     text = text[0].replace(/[\[\]\(\)]/g, "");
-    //     link = link[0].replace(/[\[\]\(\)]/g, "");
-    //     return {
-    //         text: text,
-    //         link: link,
-    //     };
-    //});
-    console.log(myArray);
+    result = myArray.map((a) => {
+        var reText = /(\[\S.*\])+/g;
+        var reLink = /(\(https?:\/\/.*\))+/g;
+        let text = a.match(reText);
+        let link = a.match(reLink);
+        text = text[0].replace(/[\[\]\(\)]/g, "");
+        link = link[0].replace(/[\[\]\(\)]/g, "");
+        return {
+            href: link,
+            text: text,
+            file: file,
+        };
+    });
+    console.log(result);
 });
 // var fs = require("fs");
 // var readMe = fs.readFileSync("README.md", "utf-8");
