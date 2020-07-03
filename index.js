@@ -40,23 +40,3 @@ files.forEach((file) => {
     });
     console.log(result);
 });
-// var fs = require("fs");
-// var readMe = fs.readFileSync("README.md", "utf-8");
-
-// var re = /(\[\S.*\]\(https?:\/\/.*\))+/g;
-
-// let myArray = readMe.match(re);
-
-// result = myArray.map((a) => {
-//     var reText = /(\[\S.*\])+/g;
-//     var reLink = /(\(https?:\/\/.*\))+/g;
-//     let text = a.match(reText);
-//     let link = a.match(reLink);
-//     text = text[0].replace(/[\[\]\(\)]/g, "");
-//     link = link[0].replace(/[\[\]\(\)]/g, "");
-//     return {
-//         text: text,
-//         link: link,
-//     };
-// });
-// console.log(result);
