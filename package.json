@@ -1,4 +1,11 @@
 {
     "name": "md-links",
-    "version": "0.1.0"
+    "version": "0.1.0",
+    "description": "search links in .md files",
+    "main": "./index.js",
+    "author": {
+        "name": "Gabriela Piovezan",
+        "email": "gabrielapiovezan@live.com",
+        "url": "https://github.com/gabrielapiovezan"
+    }
 }
