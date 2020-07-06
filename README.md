@@ -2,17 +2,17 @@
 
 ## Índice
 
-* [1. Prefácio](#1-prefácio)
-* [2. Resumo do projeto](#2-resumo-do-projeto)
-* [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
-* [4. Considerações gerais](#4-considerações-gerais)
-* [5. Critérios de aceitação mínimos do projeto](#5-criterios-de-aceitação-mínimos-do-projeto)
-* [6. Entregáveis](#6-entregáveis)
-* [7. Hacker edition](#7-hacker-edition)
-* [8. Guias, dicas e leituras complementares](#8-guias-dicas-e-leituras-complementares)
-* [9. Checklist](#9-checklist)
+- [1. Prefácio](#1-prefácio)
+- [2. Resumo do projeto](#2-resumo-do-projeto)
+- [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
+- [4. Considerações gerais](#4-considerações-gerais)
+- [5. Critérios de aceitação mínimos do projeto](#5-criterios-de-aceitação-mínimos-do-projeto)
+- [6. Entregáveis](#6-entregáveis)
+- [7. Hacker edition](#7-hacker-edition)
+- [8. Guias, dicas e leituras complementares](#8-guias-dicas-e-leituras-complementares)
+- [9. Checklist](#9-checklist)
 
-***
+---
 
 ## 1. Prefácio
 
@@ -61,76 +61,76 @@ A seguir você pode conferir os objetivos de aprendizagem deste projeto:
 
 ### Javascript
 
-* [ ] Uso de condicionais (if-else | switch | operador ternario)
-* [ ] Uso de funções (parâmetros | argumentos | valor de retorno)
-* [ ] Manipular arrays (filter | map | sort | reduce)
-* [ ] Manipular objects (key | value)
-* [ ] Uso ES modules ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+- [ ] Uso de condicionais (if-else | switch | operador ternario)
+- [ ] Uso de funções (parâmetros | argumentos | valor de retorno)
+- [ ] Manipular arrays (filter | map | sort | reduce)
+- [ ] Manipular objects (key | value)
+- [ ] Uso ES modules ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
       | [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
-* [ ] Diferença entre expression e statements.
-* [ ] Diferença entre tipos de dados atômicos e estruturados.
-* [ ] [Uso de callbacks](https://developer.mozilla.org/pt-BR/docs/Glossario/Callback_function)
-* [ ] [Consumo de Promises](https://scotch.io/tutorials/javascript-promises-for-dummies#toc-consuming-promises)
-* [ ] [Criação de uma Promise](https://www.freecodecamp.org/news/how-to-write-a-javascript-promise-4ed8d44292b8/)
+- [ ] Diferença entre expression e statements.
+- [ ] Diferença entre tipos de dados atômicos e estruturados.
+- [ ] [Uso de callbacks](https://developer.mozilla.org/pt-BR/docs/Glossario/Callback_function)
+- [ ] [Consumo de Promises](https://scotch.io/tutorials/javascript-promises-for-dummies#toc-consuming-promises)
+- [ ] [Criação de uma Promise](https://www.freecodecamp.org/news/how-to-write-a-javascript-promise-4ed8d44292b8/)
 
 ### Node
 
-* [ ] Uso de sistema de arquivos ([fs](https://nodejs.org/api/fs.html), [path](https://nodejs.org/api/path.html))
-* [ ] Instalar e usar módulos. ([npm](https://www.npmjs.com/))
-* [ ] criação de módulos [(CommonJS)](https://nodejs.org/docs/latest-v0.10.x/api/modules.html)
-* [ ] [Configuração do package.json.](https://docs.npmjs.com/files/package.json)
-* [ ] [Configuração do npm-scripts](https://docs.npmjs.com/misc/scripts)
-* [ ] Uso de CLI (Command Line Interface - Interface de Linha de Comando)
+- [ ] Uso de sistema de arquivos ([fs](https://nodejs.org/api/fs.html), [path](https://nodejs.org/api/path.html))
+- [ ] Instalar e usar módulos. ([npm](https://www.npmjs.com/))
+- [ ] criação de módulos [(CommonJS)](https://nodejs.org/docs/latest-v0.10.x/api/modules.html)
+- [ ] [Configuração do package.json.](https://docs.npmjs.com/files/package.json)
+- [ ] [Configuração do npm-scripts](https://docs.npmjs.com/misc/scripts)
+- [ ] Uso de CLI (Command Line Interface - Interface de Linha de Comando)
 
 ### Testing
 
-* [ ] [Teste unitário.](https://jestjs.io/docs/pt-BR/getting-started)
-* [ ] [Teste assíncrono.](https://jestjs.io/docs/pt-BR/asynchronous)
-* [ ] [Uso de bibliotecas de Mock.](https://jestjs.io/docs/pt-BR/manual-mocks)
-* [ ] Uso de Mocks manuais.
-* [ ] Teste para múltiplos Sistemas Operativos.
+- [ ] [Teste unitário.](https://jestjs.io/docs/pt-BR/getting-started)
+- [ ] [Teste assíncrono.](https://jestjs.io/docs/pt-BR/asynchronous)
+- [ ] [Uso de bibliotecas de Mock.](https://jestjs.io/docs/pt-BR/manual-mocks)
+- [ ] Uso de Mocks manuais.
+- [ ] Teste para múltiplos Sistemas Operativos.
 
 ### Estrutura do código e guia de estilo
 
-* [ ] Organizar e dividir o código em módulos (Modularização)
-* [ ] Uso de identificadores descritivos (Nomenclatura | Semântica)
-* [ ] Uso de linter (ESLINT)
+- [ ] Organizar e dividir o código em módulos (Modularização)
+- [ ] Uso de identificadores descritivos (Nomenclatura | Semântica)
+- [ ] Uso de linter (ESLINT)
 
 ### Git e Github
 
-* [ ] Uso de comandos de git (add | commit | pull | status | push)
-* [ ] Gerenciamento de repositorios de GitHub (clone | fork | gh-pages)
-* [ ] Colaboração no Github (branches | pull requests | |tags)
+- [ ] Uso de comandos de git (add | commit | pull | status | push)
+- [ ] Gerenciamento de repositorios de GitHub (clone | fork | gh-pages)
+- [ ] Colaboração no Github (branches | pull requests | |tags)
 
 ### HTTP
 
-* [ ] Verbos HTTP ([http.get](https://nodejs.org/api/http.html#http_http_get_options_callback))
+- [ ] Verbos HTTP ([http.get](https://nodejs.org/api/http.html#http_http_get_options_callback))
 
 ### Fundamentos de programação
 
-* [ ] [Recursão.](https://www.youtube.com/watch?v=lPPgY3HLlhQ)
+- [ ] [Recursão.](https://www.youtube.com/watch?v=lPPgY3HLlhQ)
 
-***
+---
 
 ## 4. Considerações gerais
 
-* Este projeto deve ser feito individualmente.
+- Este projeto deve ser feito individualmente.
 
-* A biblioteca e script executável (ferramenta de linha de comando - CLI) devem
+- A biblioteca e script executável (ferramenta de linha de comando - CLI) devem
   ser implementados em JavaScript para serem executadas com Node.JS.
   **É permitido usar bibliotecas externas**.
 
-* O seu módulo deve ser instalável via `npm install <github-user>/md-links`. O
+- O seu módulo deve ser instalável via `npm install <github-user>/md-links`. O
   módulo deve incluir um _executável_ que pode ser chamado tanto por linha de
   comando quanto importado com `require` para ser usado em seu código.
 
-* Os testes unitários devem cobrir no mínimo 70% dos _statements_, _functions_,
+- Os testes unitários devem cobrir no mínimo 70% dos _statements_, _functions_,
   _lines_ e _branches_. Recomendamos que explore o [Jest](https://jestjs.io/)
   para as suas provas unitárias.
 
-* Neste projeto não é permitido utilizar `async/await`.
+- Neste projeto não é permitido utilizar `async/await`.
 
-* Para este projeto é opcional o uso de ES modules `(import/export)`. Caso
+- Para este projeto é opcional o uso de ES modules `(import/export)`. Caso
   você decida utilizá-lo deverá criar um script de `build` no `package.json`
   para que seja transformado em `requires` e `module.exports` com ajuda do Babel.
 
@@ -141,19 +141,19 @@ repositório.
 
 ### Arquivos do projeto
 
-* `README.md` com descrição do módulo, instruções de instalação e uso,
+- `README.md` com descrição do módulo, instruções de instalação e uso,
   documentação da API e exemplos. Tudo que for relevante para qualquer
   desenvolvedora saber como utilizar a sua biblioteca sem inconvenientes.
-* `index.js`: este arquivo deve exportar a função `mdLinks`.
-* `package.json` deve possuir o nome, versão, descrição, autor, licença,
+- `index.js`: este arquivo deve exportar a função `mdLinks`.
+- `package.json` deve possuir o nome, versão, descrição, autor, licença,
   dependências e scripts (pretest, test e etc).
-* `.editorconfig` com a configuração para o editor de texto. Este arquivo não
+- `.editorconfig` com a configuração para o editor de texto. Este arquivo não
   deve ser alterado.
-* `.eslintrc` com a configuração para o linter. Este arquivo não deve ser
+- `.eslintrc` com a configuração para o linter. Este arquivo não deve ser
   alterado.
-* `.gitignore` para ignorar o `node_modules` e outras pastas que não devem
+- `.gitignore` para ignorar o `node_modules` e outras pastas que não devem
   ser incluídas no controle de versão (`git`).
-* `test/md-links.spec.js` deve conter os testes unitários para a função
+- `test/md-links.spec.js` deve conter os testes unitários para a função
   `mdLinks()`. A sua implementação deve rodar estes testes.
 
 ### JavaScript API
@@ -165,10 +165,10 @@ seguinte interface:
 
 ##### Argumentos
 
-* `path`: Rota absoluta ou relativa ao arquivo ou diretório. Se a rota passada é
+- `path`: Rota absoluta ou relativa ao arquivo ou diretório. Se a rota passada é
   relativa, deve resolver como sendo relativa ao diretório onde foi chamada -
   _current working directory_
-* `options`: Um objeto com a seguinte propriedade:
+- `options`: Um objeto com a seguinte propriedade:
   - `validate`: Um booleano que determina se deseja validar os links
     encontrados.
 
@@ -178,9 +178,9 @@ A função deve retornar uma promessa (`Promise`) que resolve um array (`Array`)
 objetos(`Object`), onde cada objeto representa um link, contendo as seguintes
 propriedades:
 
-* `href`: URL encontrada.
-* `text`: Texto que irá aparecer dentro de um link (`<a>`).
-* `file`: Rota do arquivo onde foi encontrado o link.
+- `href`: URL encontrada.
+- `text`: Texto que irá aparecer dentro de um link (`<a>`).
+- `file`: Rota do arquivo onde foi encontrado o link.
 
 #### Exemplo
 
@@ -188,19 +188,19 @@ propriedades:
 const mdLinks = require("md-links");
 
 mdLinks("./some/example.md")
-  .then(links => {
+  .then((links) => {
     // => [{ href, text, file }]
   })
   .catch(console.error);
 
 mdLinks("./some/example.md", { validate: true })
-  .then(links => {
+  .then((links) => {
     // => [{ href, text, file, status, ok }]
   })
   .catch(console.error);
 
 mdLinks("./some/dir")
-  .then(links => {
+  .then((links) => {
     // => [{ href, text, file }]
   })
   .catch(console.error);
@@ -282,11 +282,11 @@ As seções chamadas _Hacker Edition_ são **opcionais**. É para caso você ten
 e pode assim aprofundar e/ou exercitar mais sobre os objetivos de
 aprendizagem deste projeto.
 
-* Poder adicionar uma propriedade `line` a cada objeto `link` indicando em que
+- Poder adicionar uma propriedade `line` a cada objeto `link` indicando em que
   linha do arquivo está o link.
-* Poder agregar mais estatísticas.
+- Poder agregar mais estatísticas.
 
-***
+---
 
 ## 8. Guias, dicas e leituras complementares
 
@@ -296,8 +296,8 @@ aprendizagem deste projeto.
 
 Para que o módulo seja instalável pelo GitHub você tem que:
 
-* Deixar o seu repo público
-* Ter um `package.json` válido
+- Deixar o seu repo público
+- Ter um `package.json` válido
 
 Com o comando `npm install <githubname>/<reponame>` podemos instalar diretamente
 pelo GitHub. Ver [docs oficiais dp `npm install`
@@ -318,17 +318,17 @@ bibliotecas quanto com JS puro.
 Por exemplo, o _parse_ (análise) do Markdown para extrair os links poderia ser
 criado das seguintes maneiras (todas são válidas):
 
-* Usando um _módulo_ como
+- Usando um _módulo_ como
   [markdown-it](https://github.com/markdown-it/markdown-it), que nos devolve um
   array de _tokes_ que utilizamos para identificar os links.
-* Seguindo outro caminho, poderíamos usar [expressões regulares
+- Seguindo outro caminho, poderíamos usar [expressões regulares
   (`RegExp`)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions).
-* Também poderíamos usar uma combinação de vários _módulos_ (poderia ser válido
+- Também poderíamos usar uma combinação de vários _módulos_ (poderia ser válido
   transformar o markdown em um HTML usando o
   [marked](https://github.com/markedjs/marked) e depois extrair os links com uma
   biblioteca de DOM como [JSDOM](https://github.com/jsdom/jsdom) o
   [Cheerio](https://github.com/cheeriojs/cheerio)).
-* Usando um _custom renderer_ de [marked](https://github.com/markedjs/marked)
+- Usando um _custom renderer_ de [marked](https://github.com/markedjs/marked)
   (`new marked.Renderer()`).
 
 **Nós recomendamos o uso de `Regex` ou da biblioteca de `JSDOM`**
@@ -339,70 +339,70 @@ destas decisões. Não existe uma única maneira certa :wink:
 
 ### Tutoriais / NodeSchool workshoppers
 
-* [learnyounode](https://github.com/workshopper/learnyounode)
-* [how-to-npm](https://github.com/workshopper/how-to-npm)
-* [promise-it-wont-hurt](https://github.com/stevekane/promise-it-wont-hurt)
+- [learnyounode](https://github.com/workshopper/learnyounode)
+- [how-to-npm](https://github.com/workshopper/how-to-npm)
+- [promise-it-wont-hurt](https://github.com/stevekane/promise-it-wont-hurt)
 
 ### Outros recursos
 
-* [Sobre Node.js - Documentação oficial](https://nodejs.org/pt-br/about/)
-* [Node.js file system - Documentação oficial](https://nodejs.org/api/fs.html)
-* [Node.js http.get - Documentação
+- [Sobre Node.js - Documentação oficial](https://nodejs.org/pt-br/about/)
+- [Node.js file system - Documentação oficial](https://nodejs.org/api/fs.html)
+- [Node.js http.get - Documentação
   oficial](https://nodejs.org/api/http.html#http_http_get_options_callback)
-* [Node.js - Wikipedia](https://pt.wikipedia.org/wiki/Node.js)
-* [What exactly is Node.js? -
+- [Node.js - Wikipedia](https://pt.wikipedia.org/wiki/Node.js)
+- [What exactly is Node.js? -
   freeCodeCamp](https://medium.freecodecamp.org/what-exactly-is-node-js-ae36e97449f5)
-* [Node.js – O que é, como funciona e quais as
+- [Node.js – O que é, como funciona e quais as
   vantagens](https://www.opus-software.com.br/node-js/)
-* [O que é npm](https://www.hostinger.com.br/tutoriais/o-que-e-npm)
-* [Módulos, librerías, paquetes, frameworks... ¿cuál es la
+- [O que é npm](https://www.hostinger.com.br/tutoriais/o-que-e-npm)
+- [Módulos, librerías, paquetes, frameworks... ¿cuál es la
   diferencia?](http://community.laboratoria.la/t/modulos-librerias-paquetes-frameworks-cual-es-la-diferencia/175)
-* [JavaScript assíncrono: callbacks, promises e async
+- [JavaScript assíncrono: callbacks, promises e async
   functions](https://medium.com/@alcidesqueiroz/javascript-ass%C3%ADncrono-callbacks-promises-e-async-functions-9191b8272298)
-* [NPM](https://docs.npmjs.com/getting-started/what-is-npm)
-* [Publicar
+- [NPM](https://docs.npmjs.com/getting-started/what-is-npm)
+- [Publicar
   package](https://docs.npmjs.com/getting-started/publishing-npm-packages)
-* [Criando um módulo
+- [Criando um módulo
   Node.js](https://docs.npmjs.com/getting-started/publishing-npm-packages)
-* [Ler um
+- [Ler um
   arquivo](https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback)
-* [Ler um
+- [Ler um
   diretório](https://nodejs.org/api/fs.html#fs_fs_readdir_path_options_callback)
-* [Path](https://nodejs.org/api/path.html)
-* [Criando sua CLI com
+- [Path](https://nodejs.org/api/path.html)
+- [Criando sua CLI com
   Node.js](https://medium.com/henriquekuwai/criando-sua-cli-com-node-js-d6dee7d03110)
-* [Regex Crossword](https://regexcrossword.com/challenges/beginner/puzzles/1)
-* [Online Regex Tester](https://regex101.com/)
-* [Regexr](https://regexr.com/)
+- [Regex Crossword](https://regexcrossword.com/challenges/beginner/puzzles/1)
+- [Online Regex Tester](https://regex101.com/)
+- [Regexr](https://regexr.com/)
 
 ## 9. Checklist
 
 ### General
 
-* [ ] Poder instalar via `npm install --global <github-user>/md-links`
+- [ ] Poder instalar via `npm install --global <github-user>/md-links`
 
 ### `README.md`
 
-* [ ] Um board com o backlog das implementações da sua biblioteca
-* [ ] Documentação técnica da sua biblioteca
-* [ ] Guia de uso e instalação da biblioteca
+- [ ] Um board com o backlog das implementações da sua biblioteca
+- [ ] Documentação técnica da sua biblioteca
+- [ ] Guia de uso e instalação da biblioteca
 
 ### API `mdLinks(path, opts)`
 
-* [ ] O módulo exporta uma função com a interface (API) esperada
-* [ ] Implementa suporte para arquivo individual
-* [ ] Implementa suporte para diretórios
-* [ ] Implementa `options.validate`
+- [ ] O módulo exporta uma função com a interface (API) esperada
+- [ ] Implementa suporte para arquivo individual
+- [ ] Implementa suporte para diretórios
+- [ ] Implementa `options.validate`
 
 ### CLI
 
-* [ ] Possuir o executável `md-links` no path (configurado no `package.json`)
-* [ ] Executar sem erros e ter o resultado esperado
-* [ ] Implementar `--validate`
-* [ ] Implementar `--stats`
+- [ ] Possuir o executável `md-links` no path (configurado no `package.json`)
+- [ ] Executar sem erros e ter o resultado esperado
+- [ ] Implementar `--validate`
+- [ ] Implementar `--stats`
 
 ### Testes
 
-* [ ] Os testes unitários devem cobrir no mínimo 70% dos statements, functions,
-  lines e branches.
-* [ ] Rodar os testes e linter (`npm test`).
+- [ ] Os testes unitários devem cobrir no mínimo 70% dos statements, functions,
+      lines e branches.
+- [ ] Rodar os testes e linter (`npm test`).
