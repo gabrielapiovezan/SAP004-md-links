@@ -4,6 +4,7 @@ module.exports = () => {
 
 const path = require("path");
 const fs = require("fs");
+const fetch = require("node-fetch");
 
 const getFiles = (dir, files) => {
     const regex = new RegExp("\\" + ".md" + "$");
@@ -40,8 +41,7 @@ const searchlinks = (file) => {
                 file: file,
             };
         });
-
-        return result.filter((a) => true);
+        return result;
     }
 };
 
@@ -51,34 +51,26 @@ const mdLinks = (path, options) => {
         getFiles(path)
             .map(searchlinks)
             .forEach((a) => (objectInfoLinks = objectInfoLinks.concat(a)));
-
-        // console.log(objectInfoLinks);
-        //    map(searchlinks)); //.map(searchlinks);
-        //  console.log(objectInfoLinks);
         if (options) {
-            objectInfoLinks.forEach((a) => {
-                validate(a.href).then((response) => console.log(response));
-                //    console.log(status);
-                //    status.statusCode;
+            objectInfoLinks.map((linkInfo) => {
+                validate(linkInfo.href)
+                    .then((result) => (linkInfo.validate = result))
+                    .then(() => console.log(linkInfo));
             });
         }
         resolve();
         reject("Error");
-        // const result = getFiles(path).map(searchlinks);
-        // console.log(result);
     });
 };
 
 const validate = (file) => {
-    const fetch = require("node-fetch");
-    return fetch(file);
-
-    // const https = require("https");
-    // return https.get(file, (res) => {
-    // return res.statusCode;
-    //   });
+    return new Promise((resolve, reject) => {
+        fetch(file).then((response) =>
+            resolve(`${response.statusText} ${response.status}`)
+        );
+    });
 };
-//validate();
+
 mdLinks("./files", true).then((result) => {
     //  console.log(result)
 });
