@@ -9,17 +9,21 @@ const fetch = require("node-fetch");
 const getFiles = (dir, files) => {
     const regex = new RegExp("\\" + ".md" + "$");
     if (dir.match(regex)) {
+        //se a direção contém um regex
         return [dir];
     } else {
         return fs.readdirSync(dir).reduce(function(allFiles, file) {
-            const name = path.join(dir, file);
-            if (fs.statSync(name).isDirectory()) {
-                getFiles(name, allFiles);
+            //pega arquivos e pastas em um array
+
+            const routes = path.join(dir, file); // rota até o ultimo diretório
+            if (fs.statSync(routes).isDirectory()) {
+                getFiles(routes, allFiles); // se tem arquivos dentro do diretório, recursão
             } else if (file.match(regex)) {
-                allFiles.push(name);
+                // se o arquivo for md
+                allFiles.push(routes); //acumulador acrescenta o arquivo md
             }
-            return allFiles;
-        }, files || []);
+            return allFiles; // retorna o acumulador
+        }, files || []); //valor inicial
     }
 };
 
@@ -53,17 +57,22 @@ const mdLinks = (path, options) => {
             .forEach((a) => (objectInfoLinks = objectInfoLinks.concat(a)));
 
         validate(objectInfoLinks).then((objectInfoLinks) => {
-            console.log(objectInfoLinks);
+            //  console.log(objectInfoLinks);
             const status = {
                 Total: objectInfoLinks.length,
                 Unique: cleanRepeated(objectInfoLinks),
+                Broken: objectInfoLinks.map(broken).reduce((acc, cur) => acc + cur),
             };
-            console.log(status);
+            //  console.log(status);
         });
 
         resolve();
         reject("Error");
     });
+};
+
+const broken = (file) => {
+    return file.validate.includes("OK") ? 0 : 1;
 };
 
 const validate = (files) => {
