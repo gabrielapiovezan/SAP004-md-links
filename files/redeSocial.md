@@ -168,6 +168,7 @@ O objetivo de usar Firebase neste projeto é que, com ele, você aprederá a man
 
 ### Mobile first
 
+[_mobile first_](https://tableless.com.br/mobile-first-a-arte-de-pensar-com-foco)
 O conceito de [_mobile first_](https://tableless.com.br/mobile-first-a-arte-de-pensar-com-foco)
 faz referência a um processo de desenho e desenvolvimento que parte de como se vê e como funciona uma aplicação primeiro em um dispositivo móvel e mais adiante se analisa como adaptar a aplicação à telas progressivamente maiores. Esta é uma contraposição ao modelo tradicional, no qual primeiro se desenha os websites (ou webapps) para desktops e depois os adaptam para telas menores.
 
