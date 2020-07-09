@@ -9,21 +9,16 @@ const fetch = require("node-fetch");
 const getFiles = (dir, files) => {
     const regex = new RegExp("\\" + ".md" + "$");
     if (dir.match(regex)) {
-        //se a direção contém um regex
         return [dir];
     } else {
         return fs.readdirSync(dir).reduce(function(allFiles, file) {
-            //pega arquivos e pastas em um array
-
-            const routes = path.join(dir, file); // rota até o ultimo diretório
+            const routes = path.join(dir, file);
             if (fs.statSync(routes).isDirectory()) {
-                getFiles(routes, allFiles); // se tem arquivos dentro do diretório, recursão
-            } else if (file.match(regex)) {
-                // se o arquivo for md
-                allFiles.push(routes); //acumulador acrescenta o arquivo md
+                getFiles(routes, allFiles);
+                allFiles.push(routes);
             }
-            return allFiles; // retorna o acumulador
-        }, files || []); //valor inicial
+            return allFiles;
+        }, files || []);
     }
 };
 
@@ -55,21 +50,22 @@ const mdLinks = (path, options) => {
         getFiles(path)
             .map(searchlinks)
             .forEach((a) => (objectInfoLinks = objectInfoLinks.concat(a)));
+
+        const status = {
+            Total: objectInfoLinks.length,
+            Unique: cleanRepeated(objectInfoLinks),
+        };
         if (options.validate && options.status) {
             validateLinks(objectInfoLinks).then((objectInfoLinks) => {
-                resolve({
-                    Total: objectInfoLinks.length,
-                    Unique: cleanRepeated(objectInfoLinks),
-                    Broken: objectInfoLinks.map(broken).reduce((acc, cur) => acc + cur),
-                });
+                status.Broken = objectInfoLinks
+                    .map(broken)
+                    .reduce((acc, cur) => acc + cur);
+                resolve(status);
             });
         } else if (options.validate && !options.status) {
             resolve(validateLinks(objectInfoLinks));
         } else if (!options.validate && options.status) {
-            resolve({
-                Total: objectInfoLinks.length,
-                Unique: cleanRepeated(objectInfoLinks),
-            });
+            resolve(status);
         } else {
             resolve(objectInfoLinks);
         }
@@ -93,10 +89,6 @@ const validateLinks = (files) => {
     });
 };
 
-mdLinks("./files", { validate: true, status: true }).then((result) => {
-    console.log(result);
-});
-
 function cleanRepeated(files) {
     return [
         ...new Set(
@@ -106,3 +98,7 @@ function cleanRepeated(files) {
         ),
     ].length;
 }
+
+mdLinks("./files", { validate: false, status: false }).then((result) => {
+    console.log(result);
+});
