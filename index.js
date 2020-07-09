@@ -55,19 +55,24 @@ const mdLinks = (path, options) => {
         getFiles(path)
             .map(searchlinks)
             .forEach((a) => (objectInfoLinks = objectInfoLinks.concat(a)));
-
-        validate(objectInfoLinks).then((objectInfoLinks) => {
-            //  console.log(objectInfoLinks);
-            const status = {
+        if (options.validate && options.status) {
+            validateLinks(objectInfoLinks).then((objectInfoLinks) => {
+                resolve({
+                    Total: objectInfoLinks.length,
+                    Unique: cleanRepeated(objectInfoLinks),
+                    Broken: objectInfoLinks.map(broken).reduce((acc, cur) => acc + cur),
+                });
+            });
+        } else if (options.validate && !options.status) {
+            resolve(validateLinks(objectInfoLinks));
+        } else if (!options.validate && options.status) {
+            resolve({
                 Total: objectInfoLinks.length,
                 Unique: cleanRepeated(objectInfoLinks),
-                Broken: objectInfoLinks.map(broken).reduce((acc, cur) => acc + cur),
-            };
-            //  console.log(status);
-        });
-
-        resolve();
-        reject("Error");
+            });
+        } else {
+            resolve(objectInfoLinks);
+        }
     });
 };
 
@@ -75,7 +80,7 @@ const broken = (file) => {
     return file.validate.includes("OK") ? 0 : 1;
 };
 
-const validate = (files) => {
+const validateLinks = (files) => {
     return new Promise((resolve, reject) => {
         const promises = files.map((file) => fetch(file.href));
         Promise.all(promises).then((response) => {
@@ -88,8 +93,8 @@ const validate = (files) => {
     });
 };
 
-mdLinks("./files").then((result) => {
-    //  console.log(result)
+mdLinks("./files", { validate: true, status: true }).then((result) => {
+    console.log(result);
 });
 
 function cleanRepeated(files) {
