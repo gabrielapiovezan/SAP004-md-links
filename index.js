@@ -1,5 +1,7 @@
-module.exports = () => {
-    // ...
+module.exports = (path, options) => {
+    return new Promise((resolve, reject) => {
+        resolve(mdLinks(path, options));
+    });
 };
 
 const path = require("path");
