@@ -12,10 +12,11 @@ const getFiles = (dir, files) => {
         return [dir];
     } else {
         return fs.readdirSync(dir).reduce(function(allFiles, file) {
-            const routes = path.join(dir, file);
-            if (fs.statSync(routes).isDirectory()) {
-                getFiles(routes, allFiles);
-                allFiles.push(routes);
+            const name = path.join(dir, file);
+            if (fs.statSync(name).isDirectory()) {
+                getFiles(name, allFiles);
+            } else if (file.match(regex)) {
+                allFiles.push(name);
             }
             return allFiles;
         }, files || []);
