@@ -1,14 +1,21 @@
 {
     "name": "md-links",
-    "version": "0.1.0",
-    "description": "search links in .md files",
-    "main": "./index.js",
-    "author": {
-        "name": "Gabriela Piovezan",
-        "email": "gabrielapiovezan@live.com",
-        "url": "https://github.com/gabrielapiovezan"
+    "version": "1.0.0",
+    "description": "## Índice",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
     },
     "dependencies": {
         "node-fetch": "^2.6.0"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "bin": {
+        "md-links": "./cli.js"
     }
 }
