@@ -1,0 +1,115 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'gabrielapiovezan/SAP004-md-links' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData gabrielapiovezan/SAP004-md-links
+8 silly fetchOtherPackageData gabrielapiovezan/SAP004-md-links
+9 silly cache add args [ 'gabrielapiovezan/SAP004-md-links', null ]
+10 verbose cache add spec gabrielapiovezan/SAP004-md-links
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: 'gabrielapiovezan/SAP004-md-links',
+11 silly cache add   scope: null,
+11 silly cache add   name: null,
+11 silly cache add   rawSpec: 'gabrielapiovezan/SAP004-md-links',
+11 silly cache add   spec: 'github:gabrielapiovezan/SAP004-md-links',
+11 silly cache add   type: 'hosted',
+11 silly cache add   hosted:
+11 silly cache add    { type: 'github',
+11 silly cache add      ssh: 'git@github.com:gabrielapiovezan/SAP004-md-links.git',
+11 silly cache add      sshUrl: 'git+ssh://git@github.com/gabrielapiovezan/SAP004-md-links.git',
+11 silly cache add      httpsUrl: 'git+https://github.com/gabrielapiovezan/SAP004-md-links.git',
+11 silly cache add      gitUrl: 'git://github.com/gabrielapiovezan/SAP004-md-links.git',
+11 silly cache add      shortcut: 'github:gabrielapiovezan/SAP004-md-links',
+11 silly cache add      directUrl: 'https://raw.githubusercontent.com/gabrielapiovezan/SAP004-md-links/master/package.json' } }
+12 verbose addRemoteGit caching gabrielapiovezan/SAP004-md-links
+13 verbose addRemoteGit gabrielapiovezan/SAP004-md-links is a repository hosted by github
+14 silly tryGitProto attempting to clone git://github.com/gabrielapiovezan/SAP004-md-links.git
+15 silly tryClone cloning gabrielapiovezan/SAP004-md-links via git://github.com/gabrielapiovezan/SAP004-md-links.git
+16 verbose tryClone git-github-com-gabrielapiovezan-SAP004-md-links-git-03940f17 not in flight; caching
+17 verbose makeDirectory /home/gabriela/.npm/_git-remotes creation not in flight; initializing
+18 silly makeDirectory /home/gabriela/.npm/_git-remotes uid: 1000 gid: 1000
+19 info git [ 'clone',
+19 info git   '--template=/home/gabriela/.npm/_git-remotes/_templates',
+19 info git   '--mirror',
+19 info git   'git://github.com/gabrielapiovezan/SAP004-md-links.git',
+19 info git   '/home/gabriela/.npm/_git-remotes/git-github-com-gabrielapiovezan-SAP004-md-links-git-03940f17' ]
+20 verbose mirrorRemote gabrielapiovezan/SAP004-md-links git clone git://github.com/gabrielapiovezan/SAP004-md-links.git
+21 verbose setPermissions gabrielapiovezan/SAP004-md-links set permissions on /home/gabriela/.npm/_git-remotes/git-github-com-gabrielapiovezan-SAP004-md-links-git-03940f17
+22 verbose resolveHead gabrielapiovezan/SAP004-md-links original treeish: master
+23 info git [ 'rev-list', '-n1', 'master' ]
+24 silly resolveHead gabrielapiovezan/SAP004-md-links resolved treeish: 870066d2f908134efafe050655b2d8b964763309
+25 verbose resolveHead gabrielapiovezan/SAP004-md-links resolved Git URL: git://github.com/gabrielapiovezan/SAP004-md-links.git#870066d2f908134efafe050655b2d8b964763309
+26 silly resolveHead Git working directory: /tmp/npm-10460-29749f73/git-cache-89c5da96/870066d2f908134efafe050655b2d8b964763309
+27 info git [ 'clone',
+27 info git   '/home/gabriela/.npm/_git-remotes/git-github-com-gabrielapiovezan-SAP004-md-links-git-03940f17',
+27 info git   '/tmp/npm-10460-29749f73/git-cache-89c5da96/870066d2f908134efafe050655b2d8b964763309' ]
+28 verbose cloneResolved gabrielapiovezan/SAP004-md-links clone Cloning into '/tmp/npm-10460-29749f73/git-cache-89c5da96/870066d2f908134efafe050655b2d8b964763309'...
+28 verbose cloneResolved done.
+29 info git [ 'checkout', '870066d2f908134efafe050655b2d8b964763309' ]
+30 verbose checkoutTreeish gabrielapiovezan/SAP004-md-links checkout Note: checking out '870066d2f908134efafe050655b2d8b964763309'.
+30 verbose checkoutTreeish
+30 verbose checkoutTreeish You are in 'detached HEAD' state. You can look around, make experimental
+30 verbose checkoutTreeish changes and commit them, and you can discard any commits you make in this
+30 verbose checkoutTreeish state without impacting any branches by performing another checkout.
+30 verbose checkoutTreeish
+30 verbose checkoutTreeish If you want to create a new branch to retain commits you create, you may
+30 verbose checkoutTreeish do so (now or later) by using -b with the checkout command again. Example:
+30 verbose checkoutTreeish
+30 verbose checkoutTreeish   git checkout -b <new-branch-name>
+30 verbose checkoutTreeish
+30 verbose checkoutTreeish HEAD is now at 870066d Implementação do arquivo cli
+31 verbose addLocalDirectory /home/gabriela/.npm/md-links/1.0.0/package.tgz not in flight; packing
+32 verbose tar pack [ '/home/gabriela/.npm/md-links/1.0.0/package.tgz',
+32 verbose tar pack   '/tmp/npm-10460-29749f73/git-cache-89c5da96/870066d2f908134efafe050655b2d8b964763309' ]
+33 verbose tarball /home/gabriela/.npm/md-links/1.0.0/package.tgz
+34 verbose folder /tmp/npm-10460-29749f73/git-cache-89c5da96/870066d2f908134efafe050655b2d8b964763309
+35 verbose addLocalTarball adding from inside cache /home/gabriela/.npm/md-links/1.0.0/package.tgz
+36 verbose addRemoteGit data._from: gabrielapiovezan/SAP004-md-links
+37 verbose addRemoteGit data._resolved: git://github.com/gabrielapiovezan/SAP004-md-links.git#870066d2f908134efafe050655b2d8b964763309
+38 silly cache afterAdd md-links@1.0.0
+39 verbose afterAdd /home/gabriela/.npm/md-links/1.0.0/package/package.json not in flight; writing
+40 verbose afterAdd /home/gabriela/.npm/md-links/1.0.0/package/package.json written
+41 silly install normalizeTree
+42 silly loadCurrentTree Finishing
+43 silly loadIdealTree Starting
+44 silly install loadIdealTree
+45 silly cloneCurrentTree Starting
+46 silly install cloneCurrentTreeToIdealTree
+47 silly cloneCurrentTree Finishing
+48 silly loadShrinkwrap Starting
+49 silly install loadShrinkwrap
+50 silly loadShrinkwrap Finishing
+51 silly loadAllDepsIntoIdealTree Starting
+52 silly install loadAllDepsIntoIdealTree
+53 silly rollbackFailedOptional Starting
+54 silly rollbackFailedOptional Finishing
+55 silly runTopLevelLifecycles Starting
+56 silly runTopLevelLifecycles Finishing
+57 silly install printInstalled
+58 verbose stack Error: Refusing to install md-links as a dependency of itself
+58 verbose stack     at checkSelf (/usr/share/npm/lib/install/validate-args.js:40:14)
+58 verbose stack     at Array.<anonymous> (/usr/share/npm/node_modules/slide/lib/bind-actor.js:15:8)
+58 verbose stack     at LOOP (/usr/share/npm/node_modules/slide/lib/chain.js:15:14)
+58 verbose stack     at chain (/usr/share/npm/node_modules/slide/lib/chain.js:20:5)
+58 verbose stack     at /usr/share/npm/lib/install/validate-args.js:15:5
+58 verbose stack     at /usr/share/npm/node_modules/slide/lib/async-map.js:52:35
+58 verbose stack     at Array.forEach (<anonymous>)
+58 verbose stack     at /usr/share/npm/node_modules/slide/lib/async-map.js:52:11
+58 verbose stack     at Array.forEach (<anonymous>)
+58 verbose stack     at asyncMap (/usr/share/npm/node_modules/slide/lib/async-map.js:51:8)
+59 verbose cwd /home/gabriela/Documentos/Laboratoria/md-links
+60 error Linux 5.3.0-61-generic
+61 error argv "/usr/bin/node" "/usr/bin/npm" "install" "gabrielapiovezan/SAP004-md-links"
+62 error node v8.10.0
+63 error npm  v3.5.2
+64 error code ENOSELF
+65 error Refusing to install md-links as a dependency of itself
+66 error If you need help, you may report this error at:
+66 error     <https://github.com/npm/npm/issues>
+67 verbose exit [ 1, true ]
