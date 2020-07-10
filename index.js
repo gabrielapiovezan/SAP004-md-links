@@ -30,7 +30,7 @@ const mdLinks = (path, options) => {
             resolve(validateLinks(objectInfoLinks));
         } else if (!options.validate && options.status) {
             resolve(status);
-        } else if {
+        } else {
             resolve(objectInfoLinks);
         }
     });
