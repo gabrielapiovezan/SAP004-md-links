@@ -15,21 +15,22 @@ const mdLinks = (path, options) => {
             .map(searchlinks)
             .forEach((a) => (objectInfoLinks = objectInfoLinks.concat(a)));
 
-        const status = {
+        const stats = {
             Total: objectInfoLinks.length,
             Unique: cleanRepeated(objectInfoLinks),
+            Broken: "",
         };
-        if (options.validate && options.status) {
+        if (options.validate && options.stats) {
             validateLinks(objectInfoLinks).then((objectInfoLinks) => {
-                status.Broken = objectInfoLinks
+                stats.Broken = objectInfoLinks
                     .map(broken)
                     .reduce((acc, cur) => acc + cur);
-                resolve(status);
+                resolve(stats);
             });
-        } else if (options.validate && !options.status) {
+        } else if (options.validate && !options.stats) {
             resolve(validateLinks(objectInfoLinks));
-        } else if (!options.validate && options.status) {
-            resolve(status);
+        } else if (!options.validate && options.stats) {
+            resolve(stats);
         } else {
             resolve(objectInfoLinks);
         }
@@ -41,11 +42,12 @@ const getFiles = (dir, files) => {
         return [dir];
     } else {
         return fs.readdirSync(dir).reduce(function(allFiles, file) {
-            const name = path.join(dir, file);
-            if (fs.statSync(name).isDirectory()) {
-                getFiles(name, allFiles);
+            const route = path.join(dir, file);
+            console.log(route);
+            if (fs.statSync(route).isDirectory()) {
+                getFiles(route, allFiles);
             } else if (file.match(regex)) {
-                allFiles.push(name);
+                allFiles.push(route);
             }
             return allFiles;
         }, files || []);
@@ -66,9 +68,10 @@ const searchlinks = (file) => {
             text = text[0].replace(/[\[\]\(\)]/g, "");
             link = link[0].replace(/[\[\]\(\)]/g, "");
             return {
-                href: link,
-                text: text,
                 file: file,
+                href: link,
+                validate: "",
+                text: text,
             };
         });
         return result;
@@ -85,6 +88,7 @@ const validateLinks = (files) => {
         Promise.all(promises).then((response) => {
             const newArray = files.map((file, i) => {
                 file.validate = `${response[i].statusText} ${response[i].status}`;
+                //    console.log(file);
                 return file;
             });
             resolve(newArray);

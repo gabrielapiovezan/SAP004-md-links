@@ -1,7 +1,7 @@
 {
     "name": "md-links",
     "version": "1.0.0",
-    "description": "## Índice",
+    "description": "## Modulo de pesquisa e retorna links com o regex",
     "main": "index.js",
     "directories": {
         "test": "test"
@@ -13,7 +13,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "",
+    "author": "gabrielapiovezan|@live.com",
     "license": "ISC",
     "bin": {
         "md-links": "./cli.js"
