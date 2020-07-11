@@ -16,11 +16,16 @@
     "scripts": {
         "test": "jest --coverage"
     },
-    "author": "gabrielapiovezan|@live.com",
+    "author": "gabrielapiovezan@live.com",
     "license": "ISC",
     "bin": {
         "md-links": "./cli.js"
     },
+    "keywords": [
+        "links",
+        "markdown",
+        "link"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/gabrielapiovezan/SAP004-md-links.git"
