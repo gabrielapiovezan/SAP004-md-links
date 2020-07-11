@@ -28,7 +28,6 @@ const mdLinks = (path, options = { validate: false, stats: false }) => {
         } else {
             resolve(objectInfoLinks);
         }
-        // reject("Erro na requisição");
     });
 };
 const getFiles = (dir, files) => {

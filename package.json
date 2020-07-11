@@ -1,7 +1,7 @@
 {
     "name": "md-links",
     "version": "1.0.0",
-    "description": "## Modulo de pesquisa e retorna links com o regex",
+    "description": "## Biblioteca de leitura de links contidos em arquivos Markdown.",
     "main": "index.js",
     "directories": {
         "test": "jest --coverage"
