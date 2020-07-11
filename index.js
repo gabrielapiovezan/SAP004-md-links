@@ -1,8 +1,11 @@
-module.exports = (path, options) => {
-    return new Promise((resolve, reject) => {
-        resolve(mdLinks(path, options));
-    });
-};
+//module.exports = mdLinks;
+// return new Promise((resolve, reject) => {
+//     !path
+//         ?
+//         reject("Erro, insira um caminho válido") :
+//         resolve(mdLinks(path, options));
+// });
+//};
 
 const path = require("path");
 const fs = require("fs");
@@ -43,7 +46,6 @@ const getFiles = (dir, files) => {
     } else {
         return fs.readdirSync(dir).reduce(function(allFiles, file) {
             const route = path.join(dir, file);
-            console.log(route);
             if (fs.statSync(route).isDirectory()) {
                 getFiles(route, allFiles);
             } else if (file.match(regex)) {
@@ -105,3 +107,4 @@ function cleanRepeated(files) {
         ),
     ].length;
 }
+module.exports = mdLinks;
