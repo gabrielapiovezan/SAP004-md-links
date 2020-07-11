@@ -67,6 +67,7 @@ const searchlinks = (file) => {
                 text: text,
             };
         });
+        return result;
     }
 };
 
