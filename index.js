@@ -1,19 +1,11 @@
-//module.exports = mdLinks;
-// return new Promise((resolve, reject) => {
-//     !path
-//         ?
-//         reject("Erro, insira um caminho válido") :
-//         resolve(mdLinks(path, options));
-// });
-//};
-
 const path = require("path");
 const fs = require("fs");
 const fetch = require("node-fetch");
 
-const mdLinks = (path, options) => {
+const mdLinks = (path, options = { validate: false, stats: false }) => {
     let objectInfoLinks = [];
     return new Promise((resolve, reject) => {
+        !path ? reject(TypeError("Requisição recusada")) : "";
         getFiles(path)
             .map(searchlinks)
             .forEach((a) => (objectInfoLinks = objectInfoLinks.concat(a)));
@@ -21,7 +13,6 @@ const mdLinks = (path, options) => {
         const stats = {
             Total: objectInfoLinks.length,
             Unique: cleanRepeated(objectInfoLinks),
-            Broken: "",
         };
         if (options.validate && options.stats) {
             validateLinks(objectInfoLinks).then((objectInfoLinks) => {
@@ -37,6 +28,7 @@ const mdLinks = (path, options) => {
         } else {
             resolve(objectInfoLinks);
         }
+        // reject("Erro na requisição");
     });
 };
 const getFiles = (dir, files) => {
@@ -72,11 +64,9 @@ const searchlinks = (file) => {
             return {
                 file: file,
                 href: link,
-                validate: "",
                 text: text,
             };
         });
-        return result;
     }
 };
 
@@ -90,7 +80,6 @@ const validateLinks = (files) => {
         Promise.all(promises).then((response) => {
             const newArray = files.map((file, i) => {
                 file.validate = `${response[i].statusText} ${response[i].status}`;
-                //    console.log(file);
                 return file;
             });
             resolve(newArray);
@@ -107,4 +96,5 @@ function cleanRepeated(files) {
         ),
     ].length;
 }
+//mdLinks("./test/test2.md", { stats: true }).then((a) => console.log(a));
 module.exports = mdLinks;

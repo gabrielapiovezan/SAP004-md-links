@@ -301,7 +301,7 @@ Para que o módulo seja instalável pelo GitHub você tem que:
 
 Com o comando `npm install <githubname>/<reponame>` podemos instalar diretamente
 pelo GitHub. Ver [docs oficiais dp `npm install`
-aqui](https://docs.npmjs.com/cli/install)
+[aqui](https://docs.npmjs.com/cli/install)
 
 Por exemplo, o
 [`course-parser`](https://github.com/Laboratoria/course-parser) que é

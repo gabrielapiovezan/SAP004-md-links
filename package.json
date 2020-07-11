@@ -4,7 +4,7 @@
     "description": "## Modulo de pesquisa e retorna links com o regex",
     "main": "index.js",
     "directories": {
-        "test": "test"
+        "test": "jest --coverage"
     },
     "dependencies": {
         "commander": "^5.1.0",
@@ -14,7 +14,7 @@
         "jest": "^26.1.0"
     },
     "scripts": {
-        "test": "jest"
+        "test": "jest --coverage"
     },
     "author": "gabrielapiovezan|@live.com",
     "license": "ISC",

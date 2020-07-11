@@ -21,9 +21,9 @@ if (path) {
                         chalk.bold(
                             `${chalk.hex("#CD5C5C")(object.file)} ${chalk.hex("#F08080")(
                 object.href
-              )} ${chalk.hex("#FFB6C1")(object.validate)} ${chalk.hex(
-                "#FFC0CB"
-              )(object.text)}`
+              )} ${chalk.hex("#FFB6C1")(
+                object.validate ? object.validate : ""
+              )} ${chalk.hex("#FFC0CB")(object.text)}`
                         )
                     );
                 });
@@ -45,5 +45,7 @@ if (path) {
             }
         }
     );
+} else {
+    mdLinks().then((result) => console.log(result));
 }
 program.parse(process.argv);
