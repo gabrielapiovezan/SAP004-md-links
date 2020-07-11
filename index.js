@@ -96,5 +96,5 @@ function cleanRepeated(files) {
         ),
     ].length;
 }
-//mdLinks("./test/test2.md", { stats: true }).then((a) => console.log(a));
+//mdLinks("./test/", { validate: true }).then((a) => console.log(a));
 module.exports = mdLinks;
