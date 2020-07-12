@@ -35,9 +35,9 @@ if (path) {
             )}\n` +
                         ` ${chalk.hex("#20B2AA")("Unique:")} ${chalk.hex("#66CDAA")(
                 result.Unique
-              )}\n`,
+              )}`,
                         result.Broken ?
-                        `${chalk.hex("#40E0D0")("Broken:")}` +
+                        `\n ${chalk.hex("#40E0D0")("Broken:")}` +
                         ` ${chalk.hex("#7FFFD4")(result.Broken)}` :
                         ""
                     )

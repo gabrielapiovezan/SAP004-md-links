@@ -52,8 +52,8 @@ const searchlinks = (file) => {
 
     const re = /(\[\S.*\]\(https?:\/\/.*\))+/g;
     let myArray = fileME.match(re);
-    if (myArray) {
-        const result = myArray.map((a) => {
+    if (fileME.match(re)) {
+        return myArray.map((a) => {
             const reText = /(\[\S.*\])+/g;
             const reLink = /(\(https?:\/\/.*\))+/g;
             let text = a.match(reText);
@@ -66,7 +66,8 @@ const searchlinks = (file) => {
                 text: text,
             };
         });
-        return result;
+    } else {
+        return [];
     }
 };
 
@@ -96,5 +97,5 @@ function cleanRepeated(files) {
         ),
     ].length;
 }
-//mdLinks("./test/", { validate: true }).then((a) => console.log(a));
+//mdLinks("./test/", { validate: true }); //.then((a) => console.log(a));
 module.exports = mdLinks;
