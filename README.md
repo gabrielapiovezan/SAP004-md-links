@@ -131,7 +131,7 @@ npm -i -g GabrielaPiovezan/SAP004-md-links
 Para instalação local, execute no terminal
 
 ```sh
-npm -i  PabrielaPiovezan/SAP004-md-links
+npm -i  GabrielaPiovezan/SAP004-md-links
 ```
 
 ## 4. Considerações Técnicas

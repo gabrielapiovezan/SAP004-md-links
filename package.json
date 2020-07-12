@@ -1,6 +1,6 @@
 {
     "name": "@gabrielapiovezan/md-links",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "## Biblioteca de leitura de links contidos em arquivos Markdown.",
     "main": "index.js",
     "directories": {
