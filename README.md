@@ -2,12 +2,12 @@
 
 <img  alt="drawing" width="400"  aligng="center" src="./img/markdown.png">
 
-
 ## Índice
-* [1. Prefácio](#1-prefácio)
-* [2. Funcionalidade](#2-funcionalidade)
-* [3. Instalação](#3-instalação)
-* [4. Considerações técnicas](#4-considerações-técnicas)
+
+- [1. Prefácio](#1-prefácio)
+- [2. Funcionalidade](#2-funcionalidade)
+- [3. Instalação](#3-instalação)
+- [4. Considerações técnicas](#4-considerações-técnicas)
 
 ## 1. Prefácio
 
@@ -17,9 +17,9 @@ O [md-links](https://github.com/gabrielapiovezan/SAP004-md-links) é uma bibliot
 
 A biblioteca quando requisitada, necessita dos parâmetros:
 
--Path: Rota da pasta ou arquivo de necessita fazer a busca). 
+-Path: Rota da pasta ou arquivo de necessita fazer a busca).
 
-- `Validate`:(Opcional) Para verificar o status de cada link 
+- `Validate`:(Opcional) Para verificar o status de cada link
 - `Stats`: (Opcional) Para verificar as estatísticas dos dados.
 - Também pode-se combinar os parâmetros `Validate` e `Stats` para acrescentar nas estatísticas os dados do status da validação.
 
@@ -125,13 +125,13 @@ _Para a instalação da biblioteca é necessário possuir o [Nodejs](https://nod
 Para instalação global, execute no terminal:
 
 ```sh
-npm -i -g gabrielapiovezan/SAP004-md-links
+npm -i -g gabrielapiovezan/md-links
 ```
 
 Para instalação local, execute no terminal
 
 ```sh
-npm -i  gabrielapiovezan/SAP004-md-links
+npm -i  gabrielapiovezan/md-links
 ```
 
 ## 4. Considerações Técnicas
@@ -139,7 +139,8 @@ npm -i  gabrielapiovezan/SAP004-md-links
 Para a construção da biblioteca foi utilizado o Node-JS através do software Visual Studio Code com o gerenciador de pacotes NPM.
 A linguagem de programação utilizada foi o
 JavaScript.
-Foram utilizadas as seguintes extensões: 
-- [Jest](https://jestjs.io/), para testes síncronos e assíncronos do arquivo raiz. 
-- [Node-Fetch](https://www.npmjs.com/package/node-fetch), Para validação dos links. 
+Foram utilizadas as seguintes extensões:
+
+- [Jest](https://jestjs.io/), para testes síncronos e assíncronos do arquivo raiz.
+- [Node-Fetch](https://www.npmjs.com/package/node-fetch), Para validação dos links.
 - [Commander](https://www.npmjs.com/package/commander), para implementação da CLI.
