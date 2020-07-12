@@ -33,5 +33,8 @@
     "bugs": {
         "url": "https://github.com/gabrielapiovezan/SAP004-md-links/issues"
     },
+    "publishConfig": {
+        "access": "public"
+    },
     "homepage": "https://github.com/gabrielapiovezan/SAP004-md-links#readme"
 }
