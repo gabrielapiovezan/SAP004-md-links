@@ -1,5 +1,5 @@
 {
-    "name": "md-links",
+    "name": "@gabrielapiovezan/md-links",
     "version": "1.0.0",
     "description": "## Biblioteca de leitura de links contidos em arquivos Markdown.",
     "main": "index.js",
@@ -29,5 +29,9 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/gabrielapiovezan/SAP004-md-links.git"
-    }
+    },
+    "bugs": {
+        "url": "https://github.com/gabrielapiovezan/SAP004-md-links/issues"
+    },
+    "homepage": "https://github.com/gabrielapiovezan/SAP004-md-links#readme"
 }
