@@ -1,16 +1,11 @@
-module.exports = (path, options) => {
-    return new Promise((resolve, reject) => {
-        resolve(mdLinks(path, options));
-    });
-};
-
 const path = require("path");
 const fs = require("fs");
 const fetch = require("node-fetch");
 
-const mdLinks = (path, options) => {
+const mdLinks = (path, options = { validate: false, stats: false }) => {
     let objectInfoLinks = [];
     return new Promise((resolve, reject) => {
+        !path ? reject(TypeError("Requisição recusada")) : "";
         getFiles(path)
             .map(searchlinks)
             .forEach((a) => (objectInfoLinks = objectInfoLinks.concat(a)));
@@ -18,7 +13,6 @@ const mdLinks = (path, options) => {
         const stats = {
             Total: objectInfoLinks.length,
             Unique: cleanRepeated(objectInfoLinks),
-            Broken: "",
         };
         if (options.validate && options.stats) {
             validateLinks(objectInfoLinks).then((objectInfoLinks) => {
@@ -43,7 +37,6 @@ const getFiles = (dir, files) => {
     } else {
         return fs.readdirSync(dir).reduce(function(allFiles, file) {
             const route = path.join(dir, file);
-            console.log(route);
             if (fs.statSync(route).isDirectory()) {
                 getFiles(route, allFiles);
             } else if (file.match(regex)) {
@@ -59,8 +52,8 @@ const searchlinks = (file) => {
 
     const re = /(\[\S.*\]\(https?:\/\/.*\))+/g;
     let myArray = fileME.match(re);
-    if (myArray) {
-        const result = myArray.map((a) => {
+    if (fileME.match(re)) {
+        return myArray.map((a) => {
             const reText = /(\[\S.*\])+/g;
             const reLink = /(\(https?:\/\/.*\))+/g;
             let text = a.match(reText);
@@ -70,11 +63,11 @@ const searchlinks = (file) => {
             return {
                 file: file,
                 href: link,
-                validate: "",
                 text: text,
             };
         });
-        return result;
+    } else {
+        return [];
     }
 };
 
@@ -88,7 +81,6 @@ const validateLinks = (files) => {
         Promise.all(promises).then((response) => {
             const newArray = files.map((file, i) => {
                 file.validate = `${response[i].statusText} ${response[i].status}`;
-                //    console.log(file);
                 return file;
             });
             resolve(newArray);
@@ -105,3 +97,5 @@ function cleanRepeated(files) {
         ),
     ].length;
 }
+//mdLinks("./test/", { validate: true }); //.then((a) => console.log(a));
+module.exports = mdLinks;

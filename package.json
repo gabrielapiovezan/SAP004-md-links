@@ -1,23 +1,31 @@
 {
     "name": "md-links",
     "version": "1.0.0",
-    "description": "## Modulo de pesquisa e retorna links com o regex",
+    "description": "## Biblioteca de leitura de links contidos em arquivos Markdown.",
     "main": "index.js",
     "directories": {
-        "test": "test"
+        "test": "jest --coverage"
     },
     "dependencies": {
+        "commander": "^5.1.0",
         "node-fetch": "^2.6.0"
     },
-    "devDependencies": {},
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+    "devDependencies": {
+        "jest": "^26.1.0"
     },
-    "author": "gabrielapiovezan|@live.com",
+    "scripts": {
+        "test": "jest --coverage"
+    },
+    "author": "gabrielapiovezan@live.com",
     "license": "ISC",
     "bin": {
         "md-links": "./cli.js"
     },
+    "keywords": [
+        "links",
+        "markdown",
+        "link"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/gabrielapiovezan/SAP004-md-links.git"
