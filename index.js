@@ -76,7 +76,7 @@ const broken = (file) => {
 };
 
 const validateLinks = (files) => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         const promises = files.map((file) => fetch(file.href));
         Promise.all(promises).then((response) => {
             const newArray = files.map((file, i) => {
@@ -97,5 +97,5 @@ function cleanRepeated(files) {
         ),
     ].length;
 }
-//mdLinks("./test/", { validate: true }); //.then((a) => console.log(a));
+
 module.exports = mdLinks;
