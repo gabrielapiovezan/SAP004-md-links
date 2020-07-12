@@ -125,13 +125,13 @@ _Para a instalação da biblioteca é necessário possuir o [Nodejs](https://nod
 Para instalação global, execute no terminal:
 
 ```sh
-npm -i -g gabrielapiovezan/md-links
+npm -i -g GabrielaPiovezan/SAP004-md-links
 ```
 
 Para instalação local, execute no terminal
 
 ```sh
-npm -i  gabrielapiovezan/md-links
+npm -i  PabrielaPiovezan/SAP004-md-links
 ```
 
 ## 4. Considerações Técnicas
