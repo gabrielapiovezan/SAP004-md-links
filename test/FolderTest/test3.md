@@ -1,1 +1,2 @@
-Este é um testo sem links para fins de simulação dos testes.
+Este é um arquivo sem links
+para fins de simulação dos testes.
