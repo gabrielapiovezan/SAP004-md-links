@@ -1,26 +1,27 @@
 # Markdown Links
 
-<img aligng="center" src="./img/markdown.png">
+<img  alt="drawing" width="400"  aligng="center" src="./img/markdown.png">
 
-# Markdown Links
 
 ## Índice
+* [1. Prefácio](#1-prefácio)
+* [2. Funcionalidade](#2-funcionalidade)
+* [3. Instalação](#3-instalação)
+* [4. Considerações técnicas](#4-considerações-técnicas)
 
-[1. Prefácio](#1-prefácio)
-[2. Funcionalidade](#2-funcionalidade)
-[3. Instalação](#3-instalação)
-[4. Considerações técnicas](#4-considerações-técnicas)
+## 1. Prefácio
 
-## 1.Prefácio
+O [md-links](https://github.com/gabrielapiovezan/SAP004-md-links) é uma biblioteca que lê arquivos no formato markdown(.md) e retorna os links encontrados neles.
 
-O markdown links é uma biblioteca que lê arquivos no formato markdown(.md) e retorna os links encontrados neles.
-
-## 2.Funcionalidade
+## 2. Funcionalidade
 
 A biblioteca quando requisitada, necessita dos parâmetros:
 
--Path: Rota da pasta ou arquivo de necessita fazer a busca). -`Validate`:(Opcional) Para verificar o status de cada link -`Stats`: (Opcional) Para verificar as estatísticas dos dados.
-Também pode-se combinar os parâmetros `Validate` e `Stats` para acrescentar nas estatísticas os dados do status da validação.
+-Path: Rota da pasta ou arquivo de necessita fazer a busca). 
+
+- `Validate`:(Opcional) Para verificar o status de cada link 
+- `Stats`: (Opcional) Para verificar as estatísticas dos dados.
+- Também pode-se combinar os parâmetros `Validate` e `Stats` para acrescentar nas estatísticas os dados do status da validação.
 
 ### CLI
 
@@ -117,7 +118,7 @@ mdLinks("./some/example.md", { validate: true, stats: true })
   .catch(console.error);
 ```
 
-## 3.Instalação
+## 3. Instalação
 
 _Para a instalação da biblioteca é necessário possuir o [Nodejs](https://nodejs.org/en/) e o [NPM](https://www.npmjs.com/) instalados no seu computador._
 
@@ -133,9 +134,12 @@ Para instalação local, execute no terminal
 npm -i  gabrielapiovezan/SAP004-md-links
 ```
 
-## 4.Considerações Técnicas
+## 4. Considerações Técnicas
 
 Para a construção da biblioteca foi utilizado o Node-JS através do software Visual Studio Code com o gerenciador de pacotes NPM.
 A linguagem de programação utilizada foi o
 JavaScript.
-Foram utilizadas as seguintes extensões: -[Jest](https://jestjs.io/), para testes síncronos e assíncronos do arquivo raiz. -[Node-Fetch](https://www.npmjs.com/package/node-fetch), Para validação dos links. -[Commander], para implementação da CLI.
+Foram utilizadas as seguintes extensões: 
+- [Jest](https://jestjs.io/), para testes síncronos e assíncronos do arquivo raiz. 
+- [Node-Fetch](https://www.npmjs.com/package/node-fetch), Para validação dos links. 
+- [Commander](https://www.npmjs.com/package/commander), para implementação da CLI.
